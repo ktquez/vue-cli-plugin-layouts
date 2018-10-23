@@ -1,0 +1,28 @@
+{
+  "name": "vue-cli-plugin-layouts",
+  "version": "0.0.1",
+  "description": "vue-cli 3 plugin Multiple layouts in your SPA with vue-extend-layout",
+  "main": "index.js",
+  "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com:ktquez/vue-cli-plugin-layouts.git"
+  },
+  "keywords": [
+    "vuejs",
+    "vue-cli 3",
+    "layout",
+    "vue-layout",
+    "nuxt",
+    "spa",
+    "pwa",
+    "vue-router",
+    "choose",
+    "multi layouts"
+  ],
+  "author": "Alan Ktquez <ktquez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/ktquez/vue-cli-plugin-layouts/issues"
+  },
+  "homepage": "https://github.com/ktquez/vue-cli-plugin-layouts#readme"
+}
