@@ -1,7 +1,9 @@
 module.exports = (api, options) => {
+  const vel = 'https://github.com/ktquez/vue-extend-layout'
+
   api.extendPackage({
     dependencies: {
-      'vue-extend-layout': '^2.0.5'
+      'vue-extend-layout': '^2.0.6'
     }
   })
 
@@ -16,12 +18,19 @@ module.exports = (api, options) => {
         fs.copyFileSync(tplAppPath, 'src/App.vue')
         fs.unlink(tplAppPath)
 
-        api.exitLog('Successfully installed, to learn more: https://github.com/ktquez/vue-extend-layout', 'info')
+        const layoutDefault = api.resolve('src/layouts/default.vue')
+        if (fs.existsSync(layoutDefault)) {
+          let content = fs.readFileSync(layoutDefault, { encoding: 'utf8' })
+          content = content.replace(' id="app"', '')
+          fs.writeFileSync(layoutDefault, content, { encoding: 'utf8' })
+        }
+
+        api.exitLog(`Successfully installed, to learn more: ${vel}`, 'info')
       } catch (e) {
-        api.exitLog('Your main file couldn\'t be modified. Please, visit our repository to learn more about how to manually generate layouts: https://github.com/ktquez/vue-extend-layout#create-and-using-layouts', 'warn')
+        api.exitLog(`Your main file couldn't be modified. Please, visit our repository to learn more about how to manually generate layouts: ${vel}#create-and-using-layouts`, 'warn')
       }
     })
   }
 
-  api.exitLog('Visit the vue-extend-layout repository to learn more about how to manually generate layouts: https://github.com/ktquez/vue-extend-layout#create-and-using-layouts', 'info')
+  api.exitLog(`Visit the vue-extend-layout repository to learn more about how to manually generate layouts: ${vel}#create-and-using-layouts`, 'info')
 }
