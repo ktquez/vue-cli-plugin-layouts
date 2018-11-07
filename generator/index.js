@@ -7,7 +7,7 @@ module.exports = (api, options) => {
     }
   })
 
-  if (options.addLayoutsTemplate) {
+  if (options.autoConfig) {
     api.render('./template')
     const fs = require('fs')
     const appPath = api.resolve('src/App.vue')

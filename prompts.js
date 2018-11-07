@@ -1,8 +1,8 @@
 module.exports = [
   {
-    name: `addLayoutsTemplate`,
+    name: `autoConfig`,
     type: 'confirm',
-    message: 'Use layouts template?',
+    message: 'Do you want the plugin to configure the layout directory automatically?',
     default: true
   }
 ]
