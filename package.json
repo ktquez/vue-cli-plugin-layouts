@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-layouts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue-cli 3 plugin Multiple layouts in your SPA with vue-extend-layout",
   "main": "index.js",
   "repository": {
